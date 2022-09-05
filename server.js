@@ -35,10 +35,10 @@ app.get('/', (request, response) => {
 })
 
 app.get('/api/:building', (request, response) => {
-    const buildingDeet = request.params.building.toLowerCase()
-    console.log(buildingDeet)
-    if(famousBuildings[buildingDeet]){
-        response.json(famousBuildings[buildingDeet])
+    const buildingName = request.params.building.toLowerCase()
+    // console.log(buildingName)
+    if(famousBuildings[buildingName]){
+        response.json(famousBuildings[buildingName])
     }else{
         response.json(famousBuildings['unknown'])
     }
