@@ -25,8 +25,8 @@ async function apiRequest(){
 
         console.log(data)
         document.querySelector('h2').innerText = data.birthName
-    }catch(err){
-        console.log("error", err)
+    }catch(error){
+        console.log(error)
     }
 }
 
