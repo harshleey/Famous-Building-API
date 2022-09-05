@@ -30,7 +30,7 @@ let famousBuildings  = {
 
 
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
+    response.render('public')
 })
 
 app.get('/api/:building', (request, response) => {
