@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 8000
 const cors = require('cors')
 
 app.use(cors())
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // app.use(express.json())
 
 let famousBuildings  = {
@@ -32,7 +32,7 @@ let famousBuildings  = {
 
 
 app.get('/', (request, response) => {
-    response.redirect('/public')
+    response.sendFile(__dirname + '/index.html')
 })
 
 app.get('/api/:building', (request, response) => {
