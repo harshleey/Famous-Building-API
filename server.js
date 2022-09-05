@@ -37,6 +37,7 @@ app.get('/', (request, response) => {
 
 app.get('/api/:building', (request, response) => {
     const buildingDeet = request.params.building.toLowerCase()
+    console.log(buildingDeet)
     if(famousBuildings[buildingDeet]){
         response.json(famousBuildings[buildingDeet])
     }else{
