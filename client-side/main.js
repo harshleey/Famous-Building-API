@@ -1,9 +1,9 @@
 document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
-    const buildingName = document.querySelector('input').value
+    const building = document.querySelector('input').value
     try{
-        const response = await fetch(`https://famous-buildings-apis.herokuapp.com/api/${buildingName}`)
+        const response = await fetch(`https://famous-buildings-apis.herokuapp.com/api/${building}`)
         const data = await response.json()
 
         console.log(data)
@@ -12,3 +12,6 @@ async function apiRequest(){
         console.log(error)
     }
 }
+
+
+
