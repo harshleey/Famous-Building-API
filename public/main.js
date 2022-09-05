@@ -1,5 +1,7 @@
 document.querySelector('button').addEventListener('click', apiRequest)
 
+console.log('yes')
+
 async function apiRequest(){
     const building = document.querySelector('input').value
     try{
