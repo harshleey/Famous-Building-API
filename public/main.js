@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
     const building = document.querySelector('input').value
-    console.log(building)
+    // console.log(building)
     try{
         const response = await fetch(`https://famous-building-api.onrender.com/api/${building}`)
         const data = await response.json()
