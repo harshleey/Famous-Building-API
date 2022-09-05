@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', apiRequest)
 async function apiRequest(){
     const building = document.querySelector('input').value
     try{
-        const response = await fetch(`https://famous-buildings-apis.herokuapp.com/api/${building}`)
+        const response = await fetch(`https://famous-building-api.onrender.com/api/${building}`)
         const data = await response.json()
 
         console.log(data)
